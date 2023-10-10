@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Shop
+namespace JansCornerStore
 {
     class Program
     {
-        private static Random random = new Random();        
+        private static Random random = new Random();
         public static string GenerateRandomString(int IDLength)
         {
             const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
@@ -23,16 +23,20 @@ namespace Shop
 
             ShoppingCart cart = new();
 
-            cart.AddProduct(new Product("001", "Apple", 0.5m, 100, 200.50,GenerateRandomString(IDLength)));
-            //shop.AddProduct(new Product("Banana", 0.3m, 150));
+            cart.AddProduct(new Product("001", "Apple", 0.5m, 100, 200.50, "2023/12/20", GenerateRandomString(IDLength)));
+            cart.AddProduct(new Product("002", "Banana", 0.3m, 150, 345.47, "2023/11/25", GenerateRandomString(IDLength)));
             //shop.AddProduct(new Product("Carrot", 0.2m, 200));
 
-            foreach (var product in cart.Products)
+            foreach (var entry in cart.Entries)
             {
-                Console.WriteLine($" Name:      {product.Value.Name}\n Price:     {product.Value.Price} Euro \n Quantity:  {product.Value.Quantity}\n Weight:    {product.Value.Weight} g\n ID:        {product.Value.Id} ");
+                var product = entry.Product;
+                if (product != null)
+                {
+                    Console.WriteLine($" Name:      {product.Name}\n Price:     {product.Price} Euro \n Quantity:  " +
+                                      $"{product.AvailableQuantity}\n Weight:    {product.Weight} g\n ID:        " +
+                                      $"{product.Id} \n");
+                }
             }
         }
-        
     }
-
 }
