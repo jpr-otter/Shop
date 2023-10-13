@@ -10,5 +10,9 @@ namespace JansCornerStore
     {
         public int PickedQuantity { get; set; }
         public Product? Product { get; set; }
+        public override string ToString()
+        {
+            return $"{Product?.Name}    {PickedQuantity}  x  {Product?.Price}€";               
+        }
     }
 }

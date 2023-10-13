@@ -26,6 +26,7 @@ namespace JansCornerStore
             ExpiryDate = expiryDate;
             Id = id;
         }
+
     }
 
 }
