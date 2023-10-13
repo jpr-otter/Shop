@@ -85,7 +85,7 @@ namespace JansCornerStore
             
             if (ShoppingCartListbox.SelectedItems != null)
             {
-                cart.RemoveProduct(selectedProduct);
+                cart.RemoveProduct();
                 UpdateListBox();
             }
         }
