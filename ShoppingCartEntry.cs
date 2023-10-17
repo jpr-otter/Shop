@@ -9,7 +9,7 @@ namespace JansCornerStore
     public class ShoppingCartEntry
     {
         public int PickedQuantity { get; set; }
-        public Product? Product { get; set; }
+        public Product? Product { get; set; }        
         public override string ToString()
         {
             return $"{Product?.Name}    {PickedQuantity}  x  {Product?.Price}€";               

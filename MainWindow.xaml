@@ -11,7 +11,7 @@
         <ListBox x:Name="ShoppingCartListbox" Margin="417,3,10,66"/>
         <Label x:Name="TotalSumLabel" Content="Label" HorizontalAlignment="Left" Margin="458,380,0,0" VerticalAlignment="Top"/>
         <Button x:Name="ApfelButton_Kopieren" Content="Apfel" HorizontalAlignment="Left" Margin="32,46,0,0" VerticalAlignment="Top" Click="ApfelButton_Kopieren_Click" Width="56" />
-        <Button x:Name="RemoveOneItemOfAGroup" Content="Remove" HorizontalAlignment="Left" Margin="407,383,0,0" VerticalAlignment="Top" Click="RemoveOneItemOfAGroup_Click" />
+        <Button x:Name="RemoveOneItemOfAGroup" Content="Remove all items of a group" HorizontalAlignment="Left" Margin="300,383,0,0" VerticalAlignment="Top" Click="RemoveOneItemOfAGroup_Click" />
         <Button x:Name="leMelonButton_Kopieren2" Content="leMelon" HorizontalAlignment="Left" Margin="161,104,0,0" VerticalAlignment="Top" Click="leMelonButton_Kopieren2_Click" RenderTransformOrigin="0.5,0.5" Width="72" >
             <Button.RenderTransform>
                 <TransformGroup>
@@ -23,6 +23,7 @@
             </Button.RenderTransform>
         </Button>
         <Button x:Name="CourgetteButton_Kopieren3" Content="Courgette" HorizontalAlignment="Left" Margin="161,77,0,0" VerticalAlignment="Top" Click="CourgetteButton_Kopieren3_Click" Width="71" />
+        <Button x:Name="RemoveOneEntryOfOneItems" Content="Remove only one item" HorizontalAlignment="Left" Margin="283,408,0,0" VerticalAlignment="Top" Click="RemoveOneEntryOfOneItems_Click" Width="170" />
 
     </Grid>
 </Window>

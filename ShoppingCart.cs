@@ -26,11 +26,31 @@ namespace JansCornerStore
             }
         }
 
-        public bool RemoveProduct(Product product)
+        public void RemoveSingleProduct(Product product)
         {
             var productToRemove = Entries.Find(entry => entry.Product != null && entry.Product.Id == product.Id);
-        
-            return productToRemove != null && Entries.Remove(productToRemove);
+
+            if (productToRemove != null)
+            {
+                if (productToRemove.PickedQuantity > 1)
+                {
+                    // Decrease the quantity by one
+                    productToRemove.PickedQuantity--;
+                }
+                else
+                {
+                    // If only one item left, remove the product entirely
+                    Entries.Remove(productToRemove);
+                }                
+            }            
+        }
+        public void RemoveAllProducts(Product product)
+        {
+            var productToRemove = Entries.Find(entry => entry.Product != null && entry.Product.Id == product.Id);
+            if (productToRemove != null)
+            {
+                Entries.Remove(productToRemove);
+            }            
         }
 
         public decimal CalculateTotalPrice()
