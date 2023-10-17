@@ -5,13 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:JansCornerStore"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Initialized="Window_Initialized">
+        Title="MainWindow" Height="600" Width="800" Initialized="Window_Initialized">
     <Grid>
         <Button x:Name="BananeButton" Content="Banane" HorizontalAlignment="Left" Margin="32,21,0,0" VerticalAlignment="Top" Click="BananeButton_Click" Width="56" />
         <ListBox x:Name="ShoppingCartListbox" Margin="417,3,10,66"/>
-        <Label x:Name="TotalSumLabel" Content="Label" HorizontalAlignment="Left" Margin="458,380,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="ApfelButton_Kopieren" Content="Apfel" HorizontalAlignment="Left" Margin="32,46,0,0" VerticalAlignment="Top" Click="ApfelButton_Kopieren_Click" Width="56" />
-        <Button x:Name="RemoveOneItemOfAGroup" Content="Remove all items of a group" HorizontalAlignment="Left" Margin="300,383,0,0" VerticalAlignment="Top" Click="RemoveOneItemOfAGroup_Click" />
+        <Label x:Name="TotalPrice" Content="Total price: " Margin="354,523,378,30" RenderTransformOrigin="0.5,0.5"/>
+        <Label x:Name="TotalSumLabel" Content="Price" HorizontalAlignment="Left" Margin="417,523,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.184,5.664"/>
+        <Button x:Name="ApfelButton_Kopieren" Content="Apfel" HorizontalAlignment="Left" Margin="32,62,0,0" VerticalAlignment="Top" Click="ApfelButton_Kopieren_Click" Width="56" />
+        <Button x:Name="RemoveOneItemOfAGroup" Content="Remove all items of a group" HorizontalAlignment="Left" Margin="242,458,0,0" VerticalAlignment="Top" Click="RemoveOneItemOfAGroup_Click" Width="170" />
         <Button x:Name="leMelonButton_Kopieren2" Content="leMelon" HorizontalAlignment="Left" Margin="161,104,0,0" VerticalAlignment="Top" Click="leMelonButton_Kopieren2_Click" RenderTransformOrigin="0.5,0.5" Width="72" >
             <Button.RenderTransform>
                 <TransformGroup>
@@ -23,7 +24,10 @@
             </Button.RenderTransform>
         </Button>
         <Button x:Name="CourgetteButton_Kopieren3" Content="Courgette" HorizontalAlignment="Left" Margin="161,77,0,0" VerticalAlignment="Top" Click="CourgetteButton_Kopieren3_Click" Width="71" />
-        <Button x:Name="RemoveOneEntryOfOneItems" Content="Remove only one item" HorizontalAlignment="Left" Margin="283,408,0,0" VerticalAlignment="Top" Click="RemoveOneEntryOfOneItems_Click" Width="170" />
+        <Button x:Name="RemoveOneEntryOfOneItems" Content="Remove only one item" HorizontalAlignment="Left" Margin="242,483,0,0" VerticalAlignment="Top" Click="RemoveOneEntryOfOneItems_Click" Width="170" />
+
+       
+
 
     </Grid>
 </Window>
