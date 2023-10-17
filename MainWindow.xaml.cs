@@ -81,13 +81,29 @@ namespace JansCornerStore
 
         private void RemoveOneItemOfAGroup_Click(object sender, RoutedEventArgs e)
         {
+            /*
             var selectedProduct = (Product)ShoppingCartListbox.SelectedItem;
             
             if (ShoppingCartListbox.SelectedItems != null)
             {
-                cart.RemoveProduct();
+                cart.RemoveProduct(selectedProduct);
+                
+                UpdateListBox();
+            }
+            */
+            var selectedEntry = (ShoppingCartEntry)ShoppingCartListbox.SelectedItem;
+            var selctedProduct = selectedEntry?.Product;
+
+            if (selctedProduct != null)
+            {
+                cart.RemoveProduct(selctedProduct);
                 UpdateListBox();
             }
         }
+        private void RemoveOneEntryOfOneItems_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
     }
 }
