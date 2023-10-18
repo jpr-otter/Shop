@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace JansCornerStore
-{
+{//
     public class Product
     {
         public string SerialNumber { get; set; }
